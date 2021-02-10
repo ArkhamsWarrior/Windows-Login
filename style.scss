@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Open+Sans+Condensed:wght@300&display=swap');
+
+$gradient:linear-gradient(150deg, rgba(191,191,191,1) 42%, rgba(242,241,255,1) 100%);
+$pix: 2px;
+
+
+*{
+    box-sizing: border-box;
+}
+
+ body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 0;
+ }
+
+ .container{
+     position: relative;
+     height: 100vh;
+    //  background:url("https://my.alfred.edu/zoom/_images/foster-lake.jpg");
+        background: url("http://source.unsplash.com/random/1600x950");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-clip: border-box;
+     transition: 1.5s cubic-bezier(.17,.67,.7,.83);
+
+    //  &::before{
+    //  }
+     &.passive{
+         filter:blur(8px);
+        }
+        &.passive .time{
+            //visibility: hidden;
+            opacity: 0;
+            transition: opacity 1.0s ease-in-out;
+    }
+
+     .content{
+        p.time{
+            user-select: none;
+            color: rgb(255, 255, 255);
+            position:absolute;
+            font-size: 48px;
+            width:900px;
+            left: 30px;
+            bottom: 0;
+            line-height: 150%;
+            span{
+                font-size: 100px;
+                }
+       }
+       
+       
+     }
+ }
+// .input {
+//     float: left;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     .circle{ 
+//         position: absolute;
+//         z-index: 3;
+//         width: 20vw;
+//         border-radius: 50px;
+//         height: 20vh;
+//         background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpaperup.com%2F53243%2Fguilty_crown_ouma_shu_yuzuriha_inori.html&psig=AOvVaw2ClvxtClnBka3J0mhTMWQL&ust=1611442227168000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIjU7J7QsO4CFQAAAAAdAAAAABAD");
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//     }
+// }
+.input{
+    position: fixed;
+
+    transform: translateX(-20%);
+    transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &.active{
+        top: 20%;
+        left:45%;
+        visibility:visible;
+    }
+    &:not(.active){
+        visibility: hidden;
+        top: 120%;
+        left:45%;
+        filter: blur(6px);
+        
+    }
+
+form {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1.0s ease-in-out;
+    div{
+        position: relative;
+    }
+    h3{
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin-top: 5%;
+    
+        height: 30px;
+        font-size: 250%;
+        letter-spacing: 1px;
+        color: white;
+        margin-left: 28%;
+    }
+    input{ 
+    margin: 10px 0 10px 10px;
+    width:15vw;
+    height: 2.7vw;
+    padding: 15px;
+    z-index: 1;
+    outline: none;
+    background:$gradient;
+    border: 3px solid rgba(255, 255, 255, 0.753);
+    border-right: none;
+    font-size: 14px;
+
+    &:focus{
+        color:white;
+        background:linear-gradient(150deg, rgba(148,148,148,1) 42%, rgba(242,241,255,1) 100%);
+    }
+    
+    }
+    button{
+        position: absolute;
+        padding-top: .30vh;
+        top: 1.4vh;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        width: 3vw;
+        height: 5.7vh;
+        background: rgba(114, 114, 114, 0.527);
+        border: solid 3px rgba(255, 255, 255, 0.753);
+        outline: none;
+        user-select: none;
+        &:hover{
+            background: rgba(134, 134, 134, 0.527);
+
+        }
+        &:active{
+            background: rgba(184, 184, 184, 0.527);
+
+        }
+    }
+
+}
+
+.circle{ 
+    user-select: none;
+    position: relative;
+    left: 1.4vw;
+    padding: 0; 
+    margin-bottom: .0vw;
+    box-sizing: padding-box;
+    // border: rgba(#000, .2) solid $pix;
+    border-radius: 200px;
+    width: 150px;
+    height: 150px;
+    zoom: 150%;
+}
+}

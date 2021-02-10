@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Open+Sans+Condensed:wght@300&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  background: url("http://source.unsplash.com/random/1600x950");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  -webkit-transition: 1.5s cubic-bezier(0.17, 0.67, 0.7, 0.83);
+  transition: 1.5s cubic-bezier(0.17, 0.67, 0.7, 0.83);
+}
+
+.container.passive {
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+.container.passive .time {
+  opacity: 0;
+  -webkit-transition: opacity 1.0s ease-in-out;
+  transition: opacity 1.0s ease-in-out;
+}
+
+.container .content p.time {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+  position: absolute;
+  font-size: 48px;
+  width: 900px;
+  left: 30px;
+  bottom: 0;
+  line-height: 150%;
+}
+
+.container .content p.time span {
+  font-size: 100px;
+}
+
+.input {
+  position: fixed;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+  -webkit-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input.active {
+  top: 20%;
+  left: 45%;
+  visibility: visible;
+}
+
+.input:not(.active) {
+  visibility: hidden;
+  top: 120%;
+  left: 45%;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+
+.input form {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 1.0s ease-in-out;
+  transition: 1.0s ease-in-out;
+}
+
+.input form div {
+  position: relative;
+}
+
+.input form h3 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: 5%;
+  height: 30px;
+  font-size: 250%;
+  letter-spacing: 1px;
+  color: white;
+  margin-left: 28%;
+}
+
+.input form input {
+  margin: 10px 0 10px 10px;
+  width: 15vw;
+  height: 2.7vw;
+  padding: 15px;
+  z-index: 1;
+  outline: none;
+  background: linear-gradient(150deg, #bfbfbf 42%, #f2f1ff 100%);
+  border: 3px solid rgba(255, 255, 255, 0.753);
+  border-right: none;
+  font-size: 14px;
+}
+
+.input form input:focus {
+  color: white;
+  background: linear-gradient(150deg, #949494 42%, #f2f1ff 100%);
+}
+
+.input form button {
+  position: absolute;
+  padding-top: .30vh;
+  top: 1.4vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  width: 3vw;
+  height: 5.7vh;
+  background: rgba(114, 114, 114, 0.527);
+  border: solid 3px rgba(255, 255, 255, 0.753);
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.input form button:hover {
+  background: rgba(134, 134, 134, 0.527);
+}
+
+.input form button:active {
+  background: rgba(184, 184, 184, 0.527);
+}
+
+.input .circle {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  left: 1.4vw;
+  padding: 0;
+  margin-bottom: .0vw;
+  -webkit-box-sizing: padding-box;
+          box-sizing: padding-box;
+  border-radius: 200px;
+  width: 150px;
+  height: 150px;
+  zoom: 150%;
+}
+/*# sourceMappingURL=style.css.map */
